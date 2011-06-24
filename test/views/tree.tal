@@ -1,0 +1,4 @@
+<tal:tal tal:dolist="$tasks" xmlns:tal="http://common-lisp.net/project/bese/tal/core">
+    <li tal:when="$task-has-children" class='jstree-closed' id="${$id}"><a href="#" tal:content="$task-name"></a></li>
+    <li tal:unless="$task-has-children" id="${$id}"><a href="#" tal:content="$task-name"></a></li>
+</tal:tal>

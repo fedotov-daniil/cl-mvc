@@ -1,0 +1,26 @@
+<ul>
+    <li>
+        <a href="#tab_15" title="tab_15" class="tab_NIL">
+            <span class="Сегодня">Сегодня</span>
+        </a>
+        <input type="hidden" value="15">
+        <span class="ui-icon ui-icon-close">Remove Tab</span>
+    </li>
+    <li>
+        <a href="#tab_17" title="tab_17" class="tab_NIL">
+            <span class="Завтра">Завтра</span>
+        </a>
+        <input type="hidden" value="17">
+        <span class="ui-icon ui-icon-close">Remove Tab</span>
+    </li>
+    <li id="unsorted" class="ui-state-default ui-corner-left">
+        <a href="#tab_unsorted" title="tab_unsorted">
+            <span>Unsorted</span>
+        </a>
+        <input type="hidden" value="unsorted">
+    </li>
+    <li id="add_tab_li" class="ui-corner-left">
+        <button id="add_tab" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                role="button" aria-disabled="false"><span class="ui-button-text">Add tab...</span></button>
+    </li>
+</ul>
