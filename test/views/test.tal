@@ -1,0 +1,6 @@
+<ul xmlns:tal="http://common-lisp.net/project/bese/tal/core">
+    <tal:tal tal:dolist="$tabs">
+        <option  value="${$id}" tal:content="$tab-name"></option>
+    </tal:tal>
+
+</ul>

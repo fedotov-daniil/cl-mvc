@@ -1,0 +1,20 @@
+<tal:tal xmlns:tal="http://common-lisp.net/project/bese/tal/core">
+    <div style="height: 40px;">
+        <input type="button" class="btn_task delete_completed" style="float: right;" value="Очистить завершённые"/>
+    </div>
+    <div class="column">
+        <div class="portlet" tal:dolist="$tasks">
+            <div class="portlet-header">
+                <input type="checkbox" id="task_check_${$id}" class="root_checkbox"/>
+                <ins tal:unless="$task-completed" class="root_checkbox_unchecked"></ins>
+                <ins tal:when="$task-completed" class="root_checkbox_checked"></ins>
+                <label for="task_check_${$id}" tal:replace="$task-name"></label>
+
+            </div>
+            <div class="portlet-content" id="content_${$id}">
+
+            </div>
+        </div>
+    </div>
+</tal:tal>
+

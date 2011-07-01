@@ -1,0 +1,200 @@
+div {
+    margin: 0;
+    padding: 0;
+}
+
+#header, #footer, #content {
+    width: 100%;
+}
+#layout{
+    width: 1100px;
+    margin-left: auto ;
+  margin-right: auto ;
+}
+#right {
+    /*height: 40px;*/
+    /*width: 975px;*/
+    padding: 5px;
+    background-repeat: no-repeat;
+    width: 310px;
+    float: left;
+    /*height: 98%;*/
+}
+
+#content {
+    float: left;
+    width: 750px;
+    /*height: 98%;*/
+}
+
+#tabs {
+    height: 100%;
+}
+
+#tabs > div {
+    height: 100%;
+}
+
+.portlet {
+    margin: 10px; /*width:150px;*/
+}
+
+.portlet-content {
+    padding: 3px;
+}
+
+.portlet-header .ui-icon {
+    float: right;
+}
+
+.portlet-header{
+    padding-left: 3px;
+}
+
+/*
+*
+* JSTREE CHECKBOXES
+*
+*/
+
+.jstree-themeroller ins.jstree-checkbox {
+    background: url("d.gif");
+}
+
+.jstree-themeroller .jstree-no-icons .jstree-checkbox {
+    display: inline-block;
+}
+
+.jstree-themeroller .jstree-no-checkboxes .jstree-checkbox {
+    display: none !important;
+}
+
+.jstree-themeroller .jstree-checked > a > .jstree-checkbox {
+    background-position: -38px -19px;
+}
+
+.jstree-themeroller .jstree-unchecked > a > .jstree-checkbox {
+    background-position: -2px -19px;
+}
+
+.jstree-themeroller .jstree-undetermined > a > .jstree-checkbox {
+    background-position: -2px -19px;
+}
+
+.jstree-themeroller .jstree-checked > a > .jstree-checkbox:hover {
+    background-position: -38px -37px;
+}
+
+.jstree-themeroller .jstree-unchecked > a > .jstree-checkbox:hover {
+    background-position: -2px -37px;
+}
+
+.jstree-themeroller .jstree-undetermined > a > .jstree-checkbox:hover {
+    background-position: -2px -37px;
+}
+
+.jstree-themeroller .jstree-undetermined a .jstree-checkbox {
+    _background-position: -2px -19px;
+}
+
+.jstree-themeroller .jstree-checked a .jstree-checkbox {
+    _background-position: -38px -19px;
+}
+
+.jstree-themeroller .jstree-unchecked a .jstree-checkbox {
+    _background-position: -2px -19px;
+}
+
+a.ui-state-default {
+    border: none !important;
+    background: none !important;
+}
+
+#dialog label, #dialog input {
+    display: block;
+}
+
+#dialog label {
+    margin-top: 0.5em;
+}
+
+#dialog input, #dialog textarea {
+    width: 95%;
+}
+
+#tabs li .ui-icon-close {
+    float: right;
+    margin: 0;
+    cursor: pointer;
+}
+
+#add_tab {
+    cursor: pointer;
+}
+
+.ui-tabs-vertical {
+    width: 730px;
+}
+
+.ui-tabs-vertical .ui-tabs-nav {
+    padding: .2em .1em .2em .2em;
+    float: left;
+    width: 12em;
+    height: 98%;
+    background-repeat: no-repeat;
+}
+
+.ui-tabs-vertical .ui-tabs-nav li {
+    clear: left;
+    width: 100%;
+    border-bottom-width: 1px !important;
+    border-right-width: 0 !important;
+    margin: 0 -1px .2em 0;
+}
+
+.ui-tabs-vertical .ui-tabs-nav li a {
+    display: block;
+}
+
+.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-selected {
+    padding-bottom: 0;
+    margin-bottom: 3px;
+    padding-right: .1em;
+    border-right-width: 1px;
+    border-right-width: 1px;
+}
+
+.ui-tabs-vertical .ui-tabs-panel {
+    padding: 1em;
+    float: right;
+    width: 450px;
+}
+
+.ui-tabs-vertical .ui-state-default a {
+    width: 75%;
+}
+
+.ui-sortable-placeholder {
+    border: 1px dotted black;
+    visibility: visible !important;
+}
+
+.ui-sortable-placeholder * {
+    visibility: hidden;
+}
+
+
+.root_checkbox_unchecked{
+    background: url("d.gif") repeat scroll 0 0 transparent;
+    background-position: -2px -19px;
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+}
+.root_checkbox_checked{
+    background: url("d.gif") repeat scroll 0 0 transparent;
+    background-position: -38px -19px;
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+}

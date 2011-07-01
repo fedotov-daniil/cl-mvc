@@ -1,0 +1,15 @@
+
+<html 
+      xmlns:tal="http://common-lisp.net/project/bese/tal/core">
+	  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <head>
+  <title>привет мир, world!</title>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+	<li tal:dolist="$vals">
+		<span tal:content="$id"></span>
+		<a href="${$id}" tal:content="$tab-name"></a>
+	</li>
+  </body>
+</html>
