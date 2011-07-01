@@ -25,7 +25,10 @@
          (push package (default-controllers))
          (defparameter-in-package *mapper* package (default-mapper))
          (defun-in-package index package ())
+<<<<<<< HEAD
          (defun-in-package route-params package mvc::*route-params*)
+=======
+>>>>>>> ddc6527edba209d1d0b41e7451477946b94a3039
          (defparameter-in-package *default-action-name* package "index")
          (defparameter-in-package *filters* package (list :before nil :after nil :around nil))
          (defparameter-in-package *view-type* package ,(if view-type `',(cdr (assoc view-type *view-types*)) `*default-view-type*))
@@ -33,6 +36,7 @@
          (defparameter-in-package *view-layout* package ,(if view-layout view-layout))
          package))))
 (defparameter *default-controller* (defcontroller "Index"))
+<<<<<<< HEAD
 
 (defmacro with-controller-context (controller action bindings &body body)
   `(progn
@@ -50,6 +54,12 @@
   ;(let ((*package* controller))
   ;  (render-view (apply-with-filters action)))
   )
+=======
+(defun process-controller (controller action bindings)
+  (init-context controller action bindings)
+  (let ((*package* controller))
+    (render-view (apply-with-filters action))))
+>>>>>>> ddc6527edba209d1d0b41e7451477946b94a3039
 (defmacro make-view (&optional params &key name layout type)
   (let* ((view-type (or (cdr (assoc type *view-types*))
                         (cdr (assoc (get *action* :view-type) *view-types*))
@@ -73,6 +83,7 @@
   (defparameter-in-package *cookies-in* controller (hunchentoot:cookies-in*))
   (defparameter-in-package *cookies-out* controller (hunchentoot:cookies-out*))
   (defparameter-in-package *route-params* controller bindings))
+<<<<<<< HEAD
 
 (defun apply-with-filters (action)
   (let  ((*action* action))
@@ -83,6 +94,19 @@
         (apply-filters (get-filters *package* action :after))
         res))))
 
+=======
+(defun apply-with-filters (action)
+  (let  ((*action* action)
+          (around (get-filters *package* action :around))
+          (before (get-filters *package* action :before))
+          (after (get-filters *package* action :after)))
+    (flet ((apply-filters (filters) 
+             (mapcar #'funcall filters)))
+      (apply-filters before)
+      (let ((res (apply-around around))) 
+        (apply-filters after)
+        res))))
+>>>>>>> ddc6527edba209d1d0b41e7451477946b94a3039
 (defmethod apply-around ((around list))
   (let ((*around-list* (rest around))
         (current (first around)))
